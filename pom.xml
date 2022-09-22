@@ -17,7 +17,6 @@
             </resource>
         </resources>
         <plugins>
-            <!-- 実行可能jarファイル用のプラグイン -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -25,7 +24,6 @@
                 <configuration>
                     <finalName>dynmap-multiserver</finalName>
                     <descriptorRefs>
-                    <!-- 依存するリソースをすべてjarに同梱する -->
                     <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <archive>
@@ -36,8 +34,7 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <!-- idタグは任意の文字列であれば何でもよい -->
-                     <id>make-assembly</id>
+                     <id>dynmap-multiserver</id>
                      <phase>package</phase>
                      <goals>
                             <goal>single</goal>
